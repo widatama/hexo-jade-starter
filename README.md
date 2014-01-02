@@ -1,5 +1,5 @@
 
-Barebone theme for [Hexo] implemented with Jade and Less. The current Hexo theme list does not have anything other than ejs themes. I made this as a starting point for anyone who is interested in theming using Jade.  
+Barebone theme for [Hexo](http://zespia.tw/hexo) implemented with [Jade](http://jade-lang.com/) and [Less](http://lesscss.org/). The current Hexo theme list does not have anything other than ejs themes. I made this as a starting point for anyone who is interested in theming using Jade.  
 
 ## Installation
 
