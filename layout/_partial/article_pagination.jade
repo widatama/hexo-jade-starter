@@ -1,0 +1,9 @@
+nav#article-pagination
+  if page.prev
+    a(href=config.root + page.prev.path, title=__("prev") + ' article: ' + page.prev.title, class='prev')
+      | &larr; 
+      = __("prev") + ' article'
+  if page.next
+    a(href=config.root + page.next.path, title=__("next") + ' article: ' + page.next.title, class='next')
+      = __("next") + ' article'
+      |  &rarr;

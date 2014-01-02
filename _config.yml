@@ -1,0 +1,14 @@
+menu:
+  Home: /
+  Archives: /archives
+  About: /about
+
+excerpt_link: Read More
+
+addthis:
+  enable: false
+
+fancybox: false
+
+google_analytics:
+rss:

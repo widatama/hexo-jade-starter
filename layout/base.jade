@@ -1,0 +1,18 @@
+doctype html
+block vars
+  - var bodyclass = null;
+html(lang='en')
+  head
+    include _partial/head
+  body(class=bodyclass)
+    header#page-header
+      div#masthead
+        block header
+          h1#site-title
+            a(href=config.root)= config.title
+          p#site-slogan= config.subtitle
+          
+    section#content
+      block content        
+    footer#page-footer
+      include _partial/footer

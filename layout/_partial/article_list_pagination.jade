@@ -1,0 +1,11 @@
+nav#article-list-pagination
+  if page.prev
+    a(href=config.root + page.prev_link, title=__("prev") + ' articles')
+      | &larr; 
+      = __("prev") + ' articles'
+  if page.prev && page.next
+    | &emsp;
+  if page.next
+    a(href=config.root + page.next_link, title=__("next") + ' articles')
+      = __("next") + ' articles'
+      |  &rarr;

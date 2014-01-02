@@ -1,0 +1,12 @@
+extends base
+
+prepend window_title
+  
+  = page.title
+  &mdash;
+
+append content
+  article
+    h2= page.title
+        
+    != page.content

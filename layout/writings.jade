@@ -1,0 +1,20 @@
+extends base
+
+prepend window_title
+  
+  = page.title
+  &mdash;
+
+append content
+  article(class=page.layout)
+    h2= page.title
+    div.meta
+      include _partial/article_meta
+
+      +date(page.date)
+
+      +category(page.categories)
+    
+    != page.content
+
+  include _partial/article_pagination

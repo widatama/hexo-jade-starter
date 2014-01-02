@@ -1,0 +1,283 @@
+/* 
+
+	
+	|Globals
+
+*/
+
+  #page-header{
+    margin-bottom: 4.5em;
+  }
+
+  #masthead{
+    width: 60%;
+    max-width: 54rem;
+    margin: 3em 0 0 3rem;
+    overflow: auto;
+  }
+
+  #site-title{
+    font-size: 1.5em;
+    float: left;
+    margin-right: 1.5rem;    
+  }
+
+  #site-slogan{
+    font-size: 0.75em;
+    border-left: solid 1px @border-color;
+    padding-left: 1.5rem;
+    margin-top: 0.85em;
+    float: left;
+    line-height: 1.75;
+  }
+
+  #content{
+    clear: both;
+  }
+
+  #content header{
+    width: 60%;
+    max-width: 54rem;
+    margin: 0 0 0 3rem;
+    position: relative;
+  }
+
+  .article-list li{
+    list-style-type: none;
+    margin-bottom: 1.5em;
+    margin-top: 1.5em;
+  }
+
+  .article-list {
+
+    h2, h3{
+      font-size: 1em;
+    }
+
+  }
+
+  article .meta, .article-list .meta{
+    margin-bottom: 2.25rem;
+    margin-top: -1.5rem;
+
+		font-size: 0.75em;
+		color: #777;
+  }
+
+  .article-list .meta{
+    margin-top: -0.75em;
+  }
+
+  article h2, .article-list h2{
+    margin-top: 2em;
+    margin-bottom: 1em;
+  }
+
+  #article-list-pagination{
+    width: 60%;
+    max-width: 54rem;
+    margin: 0 0 0 3rem;
+    position: relative;
+
+    font-size: 0.75em;
+  }
+
+
+  #content article{
+    width: 60%;
+    max-width: 54rem;
+    margin: 0 0 0 3rem;
+    position: relative;
+  }
+
+  article h3{
+    margin-top: 1.8em;
+    margin-bottom: 0.6em;   
+  }
+
+  article h4{
+    margin-top: 0.75em;
+    margin-bottom: 0.75em;
+  }
+
+  article img{
+    max-width: 100%;
+  }
+
+
+
+  figure[class*="lang"] {
+    margin-bottom: 1.5em;
+  }
+
+  figure[class*="lang"] table,
+  figure[class*="lang"] pre {
+    width: 100%;
+    border: solid 0.05em @code-border;
+    display: block;
+    overflow: auto;
+    background: @code-background;
+  }
+
+  figure[class*="lang"] pre{
+    padding: 0 6px;
+  }
+
+  figure[class*="lang"] table pre{
+    margin-bottom: 0;
+  }
+
+  td.gutter {
+    width: 30px;
+    padding: 0 4px;
+    background: @code-background;
+    border-right: solid 1px @code-border;
+    text-align: right;
+  }
+
+  td.code {
+    width: 100%;
+    padding: 0 6px;
+    background: @code-background;
+  }
+
+
+
+
+  #article-pagination{
+    width: 60%;
+    max-width: 54rem;
+    margin: 0 0 0 3rem;
+    position: relative;
+
+    font-size: 0.75em;
+  }
+
+  #article-pagination a{
+    position: absolute;
+    top: 50%;
+  }
+
+  #article-pagination .prev{
+    left: 0;
+  }
+
+  #article-pagination .next{
+    right: 0;
+  } 
+
+  #page-footer{
+    padding: 0.65rem 0 0;
+    border-top: 0.1rem dotted @border-color;
+    margin: 7.5rem 0 3rem;
+  }
+
+
+  #page-footer section{
+    width: 60%;
+    max-width: 54rem;
+    margin: 0 0 0 3rem;
+    
+    font-size: 0.75em;
+
+    overflow: auto;
+  }
+
+  #footer-menu ul{
+    list-style-type: none;
+    float: left;
+  }
+
+  #footer-menu ul li{
+    display: block;
+    float: left;
+    margin-right: 1rem;
+  }
+
+
+/* 
+
+
+  |Media Queries
+
+*/
+
+  @media only screen and (max-width: 560px) {
+
+    #masthead {
+      width: 90%;
+      margin: 3em auto 0;
+    }
+
+    #site-slogan {
+      display: none;
+    }
+
+    #content{ 
+      article, 
+      header {
+        width: 90%;
+        margin: 0 auto;
+      }
+    }
+
+    article .meta {
+      margin-top: -2.7em;
+      margin-bottom: 1.8em;
+      font-size: 0.625em;
+      line-height: 1.8;
+    }
+
+    #article-list-pagination, 
+    #article-pagination {
+      width: 90%;
+      margin: 0 auto;
+      overflow: auto;
+
+      a {
+        position: relative;
+        display: block;
+        float: left;
+        clear: both;
+      }
+    }
+
+    #page-footer {
+      margin-top: 4.5rem;
+    }
+
+    #page-footer section {
+      width: 90%;
+      font-size: 0.75rem;
+      margin: 0 auto;
+    }
+
+  }
+
+  @media only screen and (min-width: 561px) and (max-width: 1080px) {
+
+    #masthead{
+      width: 90%;
+      margin: 3em auto 0;
+    }    
+
+    #content{ 
+      article, 
+      header {
+        width: 90%;
+        margin: 0 auto;
+      }
+    }
+
+    #article-list-pagination,
+    #article-pagination {
+      width: 90%;
+      margin: 0 auto;
+    }
+
+    #page-footer section{
+      width: 90%;
+      margin: 0 auto;
+    }        
+
+  }
