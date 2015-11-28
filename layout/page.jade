@@ -1,12 +1,11 @@
 extends base
 
-prepend window_title
-  
-  = page.title
-  &mdash;
+prepend site_title
+  | #{page.title} &mdash;&nbsp;
 
-append content
+block site_body
   article
-    h2= page.title
-        
-    != page.content
+    h2.page-post__title= page.title
+
+    .page-post__body
+      != page.content

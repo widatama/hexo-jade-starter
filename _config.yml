@@ -1,14 +1,17 @@
+# Header
 menu:
   Home: /
   Archives: /archives
-  About: /about
+rss: /rss2.xml
 
+# Content
 excerpt_link: Read More
-
-addthis:
-  enable: false
-
 fancybox: false
 
+# Miscellaneous
 google_analytics:
-rss:
+favicon: /favicon.png
+twitter:
+google_plus:
+fb_admins:
+fb_app_id:

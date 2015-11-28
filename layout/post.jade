@@ -1,20 +1,8 @@
 extends base
 
-prepend window_title
-  
-  = page.title
-  &mdash;
+prepend site_title
+  | #{page.title} &mdash;&nbsp;
 
-append content
-  article(class=page.layout)
-    h2= page.title
-    div.meta
-      include _partial/article_meta
-
-      +date(page.date)
-
-      +category(page.categories)
-    
-    != page.content
-
-  include _partial/article_pagination
+block site_body
+  include _partial/post/entry
+  include _partial/post/entry_pagination

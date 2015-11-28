@@ -1,26 +1,11 @@
 extends base
 
-prepend window_title
-  
-  = page.category
-  | &mdash;
+prepend site_title
+  | #{page.category} &mdash;&nbsp;
 
-block content
-  header
-    h2= page.category
+block site_body
+  h2.page__title= page.category
 
-  ul.article-list
-    - page.posts.each(function(article){
+  include _partial/post/list
 
-      li
-        article
-          h3
-            a(href=config.root + article.path)= article.title
-          div.meta
-            include _partial/article_meta
-
-            +date(article.date)
-
-            +category(article.categories)
-
-    - })
+  include _partial/post/list_pagination

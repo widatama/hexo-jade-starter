@@ -1,0 +1,34 @@
+meta(charset="utf-8")
+meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
+meta(name="viewport", content="width=device-width, initial-scale=1, maximum-scale=1")
+
+if config.author
+  meta(name="author", content=config.author)
+
+block page_description
+  meta(name="description", content=config.description)
+
+title
+  block site_title
+    = config.title
+
+link(href=config.root + "favicon.png", rel="icon")
+
+link(href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700", rel="stylesheet", type="text/css")
+
+//- RSS
+link(rel="alternate", href=theme.rss ? theme.rss : config.root + "rss2.xml", title="config.title", type="application/rss2.xml")
+
+//- Stylesheets
+!= css("css/app")
+
+
+//- Development stylesheets and scripts
+- if(!cache) {
+
+  != css("css/dev")
+  != js("javascript/jquery")
+  != js("javascript/hashgrid")
+  != js("javascript/dev")
+
+- }

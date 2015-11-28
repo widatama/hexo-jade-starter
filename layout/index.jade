@@ -1,21 +1,18 @@
 extends base
 
-block content
+block site_body
+  ul.post-items
+    - page.posts.each(function(post, i) {
+      li.post-item
 
-  ul.article-list
-    - page.posts.each(function(article){
+        article.post
 
-      li
-        article
-          h2
-            a(href=config.root + article.path)= article.title
-          div.meta
-            include _partial/article_meta
+          h2.post-item__title
+            a(href=url_for(post.path))
+              = post.title
 
-            +date(article.date)
+          .post__excerpt
+            != post.excerpt
+    - });
 
-            +category(article.categories)
-
-    - })
-
-  include _partial/article_list_pagination
+  include _partial/post/list_pagination

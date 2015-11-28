@@ -1,0 +1,10 @@
+article(class=page.layout)
+  h2.post__title= page.title
+
+  .post__meta
+    include meta
+    +postDate(page.date)
+    +postCategory(page.categories)
+
+  .post__body
+    != page.content
