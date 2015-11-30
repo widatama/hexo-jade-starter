@@ -5,8 +5,6 @@ mixin postCategory(categories)
 
   if categories.length > 0
     |  in
-    - categories.each(function(category){
+    each category in categories.toArray()
       | &ensp;
-      a(href=config.root + category.path)
-        = category.name
-    - })
+      a(href=config.root + category.path)= category.name
