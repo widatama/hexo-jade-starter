@@ -5,7 +5,7 @@
   <channel>
     <title><![CDATA[Hexo]]></title>
     <link>http://widatama.github.io/hexo-jade-starter/</link>
-    <atom:link href="/rss2.xml" rel="self" type="application/rss+xml"/>
+    <atom:link href="/hexo-jade-starter/rss2.xml" rel="self" type="application/rss+xml"/>
     <description></description>
     <pubDate>Sat, 28 Nov 2015 11:12:56 GMT</pubDate>
     <generator>http://hexo.io/</generator>
