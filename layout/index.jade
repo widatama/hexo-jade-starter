@@ -2,17 +2,12 @@ extends base
 
 block site_body
   ul.post-items
-    - page.posts.each(function(post, i) {
+    each post in page.posts.toArray()
       li.post-item
-
         article.post
-
           h2.post-item__title
-            a(href=url_for(post.path))
-              = post.title
-
-          .post__excerpt
-            != post.excerpt
-    - });
-
-  include _partial/post/list_pagination
+            a(href=url_for(post.path))= post.title
+          .post__excerpt= post.excerpt
+        
+        
+include _partial/post/list_pagination
