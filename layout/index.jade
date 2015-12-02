@@ -8,6 +8,5 @@ block site_body
           h2.post-item__title
             a(href=url_for(post.path))= post.title
           .post__excerpt= post.excerpt
-        
-        
-include _partial/post/list_pagination
+
+  include _partial/post/list_pagination
