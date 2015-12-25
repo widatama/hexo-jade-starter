@@ -1,7 +1,7 @@
-$(document).ready(function() {
+window.onload = function() {
 
-  var grid = new hashgrid({
+  var grid = new Hashgrid({
     numberOfGrids: 1
   });
 
-});
+};

@@ -1,12 +1,22 @@
 /**
  * Grid
  */
-#grid {
+#hashgrid {
+  position: absolute;
+  top: 0;
+
+  overflow: hidden;
+
+  width: 100%;
+  height: 100%;
+}
+
+.hashgrid-column-container {
   position: absolute;
   top: 0;
   left: 0;
 
-  width: 100%;
+  height: 100%;
 }
 
 /**
@@ -15,38 +25,18 @@
  * Set the column width taking the borders into consideration,
  * and use margins to set column gutters.
  */
-#grid div.vert {
-  width: 50%;
-  max-width: 36em;
-  margin-right: 15%;
+.hashgrid__column {
+  float: left;
+
+  height: 100%;
+  margin-left: 0;
 
   border: solid darkturquoise;
   border-width: 0 1px;
-}
+  border-left: none;
 
-#grid div.vert.first-line {
-  margin-left: 15%;
-}
-
-@media only screen and (max-width: @medium-max) {
-  #grid div.vert {
-    width: 80%;
-    margin-right: 10%;
-  }
-
-  #grid div.vert.first-line {
-    margin-left: 10%;
-  }
-}
-
-@media only screen and (max-width: @small-max) {
-  #grid div.vert {
-    width: 90%;
-    margin-right: 5%;
-  }
-
-  #grid div.vert.first-line {
-    margin-left: 5%;
+  &:first-child {
+    border-left: solid 1px darkturquoise;
   }
 }
 
@@ -56,7 +46,7 @@
  * Remember, the CSS properties that define the box model:
  * visible height = height + borders + margins + padding
  */
-#grid div.horiz {
+.hashgrid__row {
   height: 30px;
   margin: 0;
   padding: 0;
@@ -64,34 +54,3 @@
   border-bottom: 1px dotted darkgray;
 }
 
-@media only screen and (max-width: @medium-max) {
-  #grid div.horiz {
-    height: 24px;
-  }
-}
-
-@media only screen and (max-width: @small-max) {
-  #grid div.horiz {
-    height: 18px;
-  }
-}
-
-/**
-* Classes for multiple grids
-*
-* When using more than one grid, remember to set the numberOfGrids
-* option in the hashgrid.js file.
-*/
-#grid.grid-1 div.vert {
-  /* Vertical grid line colour for grid 1 */
-  border-color: darkturquoise;
-}
-#grid.grid-2 {
-  width: 660px;
-  /* Adjustments */
-  padding: 0 160px;
-}
-#grid.grid-2 div.vert {
-  /* Vertical grid line colour for grid 2 */
-  border-color: crimson;
-}
