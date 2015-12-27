@@ -32,13 +32,12 @@
       <guid>http://widatama.github.io/hexo-jade-starter/markdown-syntax/</guid>
       <pubDate>Wed, 23 Sep 2015 17:00:00 GMT</pubDate>
       <description>
-      <![CDATA[<ul>
-<li><a href="#overview">Overview</a><ul>
-<li><a href="#philosophy">Philosophy</a></li>
-<li><a href="#html">Inline HTML</a></li>
-<li><a ]]>
+      <![CDATA[<p>Markdown is intended to be as easy-to-read and easy-to-write as is feasible.</p>]]>
+      
       </description>
-      <content:encoded><![CDATA[<ul>
+      <content:encoded><![CDATA[<p>Markdown is intended to be as easy-to-read and easy-to-write as is feasible.</p>
+<a id="more"></a>
+<ul>
 <li><a href="#overview">Overview</a><ul>
 <li><a href="#philosophy">Philosophy</a></li>
 <li><a href="#html">Inline HTML</a></li>
