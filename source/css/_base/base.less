@@ -1,6 +1,6 @@
 /*
 
-	Basic
+	Base
 */
 
 *,
@@ -12,9 +12,9 @@
 }
 
 body {
-  background: @body-background;
+  background: @cl-body-bg;
 
-  color: @body-text;
+  color: @cl-body-text;
 }
 
 
@@ -26,23 +26,20 @@ body {
 
 a,
 a:visited {
-  -webkit-transition: color .2s ease-in;
-  -moz-transition: color .2s ease-in;
-  -o-transition: color .2s ease-in;
-  transition: color  .2s ease-in;
+  transition: color .2s ease-in;
   text-decoration: none;
 
-  color: @active-link;
+  color: @cl-link-active;
   outline: 0;
 }
 
 a:visited {
-  color: @visited-link;
+  color: @cl-link-visited;
 }
 
 a:hover,
 a:focus {
-  color: @hover-link;
+  color: @cl-link-hover;
 }
 
 p a,
@@ -60,7 +57,10 @@ p a:visited {
 ul,
 ol,
 dl {
-  margin: 0 0 1.5em;
+  .vertical-margin(0, 1);
+
+  margin-right: 0;
+  margin-left: 0;
   padding: 0;
 }
 
@@ -80,7 +80,7 @@ ol ol {
 
   margin-top: 0;
   margin-bottom: 0;
-  margin-left: 1.175em;
+  margin-left: 1.5em;
 }
 
 li h1,
@@ -99,8 +99,17 @@ li p {
   Table
 */
 
+table {
+  width: 100%;
+}
+
+th {
+  box-shadow: 0 1px 0 0 @cl-border;
+}
+
+th,
 td {
-  padding: 0 0.375em;
+  padding: 0 5px;
 }
 
 
@@ -123,8 +132,26 @@ img {
 
 /*
 
-	Miscs
+	Misc Helper
 */
+
+#googlemap img,
+object,
+embed {
+  max-width: none;
+}
+
+#map_canvas embed {
+  max-width: none;
+}
+
+#map_canvas img {
+  max-width: none;
+}
+
+#map_canvas object {
+  max-width: none;
+}
 
 .left {
   float: left;
@@ -146,61 +173,7 @@ img {
   text-align: center;
 }
 
-
-
 .is-hidden {
   display: none;
 }
 
-
-
-
-#googlemap img,
-object,
-embed {
-  max-width: none;
-}
-
-#map_canvas embed {
-  max-width: none;
-}
-
-#map_canvas img {
-  max-width: none;
-}
-
-#map_canvas object {
-  max-width: none;
-}
-
-
-
-.remove-bottom {
-  margin-bottom: 0 !important;
-}
-
-.half-bottom {
-  margin-bottom: .75em !important;
-}
-
-.add-bottom {
-  margin-bottom: 1.5em !important;
-}
-
-
-
-.full-width {
-  width: 100%;
-}
-
-.half-width {
-  width: 50%;
-}
-
-.quarter-width {
-  width: 25%;
-}
-
-.one-third-width {
-  width: 33.333%;
-}

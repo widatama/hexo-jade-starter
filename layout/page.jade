@@ -4,7 +4,7 @@ prepend site_title
   | #{page.title} &mdash;&nbsp;
 
 block site_body
-  article
-    h2.page-post__title= page.title
+  article.post
+    h2.post__title= page.title
 
-    .page-post__body= page.content
+    .post__body!= page.content

@@ -1,0 +1,72 @@
+/*
+
+  Dimensions
+*/
+
+.vertical-margin(@multiplier) {
+  margin-top: (@multiplier * @font-size-em * @line-height-base);
+  margin-bottom: (@multiplier * @font-size-em * @line-height-base);
+}
+
+.vertical-margin(@multiplier-top; @multiplier-bottom) {
+  margin-top: (@multiplier-top * @font-size-em * @line-height-base);
+  margin-bottom: (@multiplier-bottom * @font-size-em * @line-height-base);
+}
+
+.vertical-padding(@multiplier) {
+  padding-top: (@multiplier * @font-size-em * @line-height-base);
+  padding-bottom: (@multiplier * @font-size-em * @line-height-base);
+}
+
+.vertical-padding(@multiplier-top; @multiplier-bottom) {
+  padding-top: (@multiplier-top * @font-size-em * @line-height-base);
+  padding-bottom: (@multiplier-bottom * @font-size-em * @line-height-base);
+}
+
+.height(@multiplier) {
+  height: @multiplier * @font-size-em * @line-height-base;
+}
+
+.width-responsive {
+
+  width: @width-base;
+  max-width: @width-max-base;
+
+  @media only screen and (min-width: @bp-medium-min) and (max-width: @bp-medium-max) {
+    width: @width-medium;
+  }
+
+  @media only screen and (max-width: @bp-small-max) {
+    width: @width-small;
+  }
+}
+
+
+/*
+
+  Typography
+*/
+
+.font-measure() {
+  font-size: @font-size-base;
+  line-height: @line-height-base;
+
+  @media only screen and (min-width: @bp-medium-min) and (max-width: @bp-medium-max) {
+    font-size: @font-size-medium;
+  }
+
+  @media only screen and (max-width: @bp-small-max) {
+    font-size: @font-size-small;
+  }
+}
+
+.font-measure(@multiplier) {
+  font-size: @multiplier * @font-size-em;
+  line-height: (@line-height-base * unit(@font-size-em)) / (@multiplier * unit(@font-size-em));
+}
+
+.font-measure(@multiplier, @scale) {
+  font-size: @multiplier * @font-size-em;
+  line-height: @scale * (@line-height-base * unit(@font-size-em)) / (@multiplier * unit(@font-size-em));
+}
+

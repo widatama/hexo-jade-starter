@@ -70,23 +70,11 @@
 */
 
 body {
-  font-family: @font-family-base;
-  font-size: @font-size-base;
-  line-height: @line-height-base;
+  .font-measure();
+
+  font-family: @ff-base;
 
   -webkit-text-size-adjust: 100%;
-}
-
-@media only screen and (max-width: @medium-max) {
-  body {
-    font-size: @font-size-medium;
-  }
-}
-
-@media only screen and (max-width: @small-max) {
-  body {
-    font-size: @font-size-small;
-  }
 }
 
 
@@ -101,8 +89,10 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: @font-family-base;
+  font-family: @ff-heading;
   font-weight: 200;
+
+  margin: 0;
 }
 
 h1 a,
@@ -115,23 +105,17 @@ h6 a {
 }
 
 h1 {
-  font-size: 1.25em;
-  line-height: 1.2;
+  .font-measure(1.25);
+
   font-weight: 800;
 }
 
 h2 {
-  font-size: 1.5em;
-  line-height: 1;
-
-  margin: 2em 0 1em;
+  .font-measure(1.5, 2);
 }
 
 h3 {
-  font-size: 1.25em;
-  line-height: 1.2;
-
-  margin: 2.4em 0 1.2em;
+  .font-measure(1.25, 2);
 }
 
 
@@ -144,9 +128,8 @@ h3 {
 
 p,
 address {
-  font-size: 1em;
-
-  margin: 0 0 1.5em;
+  .font-measure(1);
+  .vertical-margin(0, 1);
 }
 
 p img {
@@ -172,11 +155,11 @@ b,
 strong,
 dt,
 legend {
-  font-weight: bold;
+  font-weight: 800;
 }
 
 small {
-  font-size: .75em;
+  .font-measure(.75, 2);
 }
 
 del {
@@ -184,7 +167,7 @@ del {
 }
 
 ins {
-  color: #FF0000;
+  color: @cl-highlight;
 }
 
 
@@ -197,7 +180,7 @@ ins {
 form,
 legend,
 label {
-  font-size: 1em;
+  .font-measure(1);
 }
 
 
@@ -210,12 +193,13 @@ label {
 
 table caption,
 tfoot {
-  font-size: .75em;
-  line-height: 2;
+  .font-measure(.75, 1);
 }
 
-thead {
-  font-weight: bold;
+th {
+  font-weight: 600;
+
+  text-align: left;
 }
 
 
@@ -231,35 +215,42 @@ samp,
 pre,
 tt,
 var {
-  font-family: @font-family-code;
+  font-family: @ff-code;
   font-weight: 400;
 }
 
 pre {
-  font-size: .75em;
-  line-height: 2;
+  .font-measure(.75);
 
   overflow: auto;
 
-  margin: 0 0;
+  margin: 0;
 
   white-space: pre;
 }
 
 pre code {
-  background: @code-background;
+  background: @cl-code-bg;
+
+  .vertical-margin(0, 1.334);
 
   display: block;
   overflow: auto;
 
-  margin-bottom: 2em;
-  padding: 0 .75em;
+  padding: 0 .5em;
 }
 
-p code {
-  line-height: 1;
-}
+p,
+li {
+  code {
+    background: @cl-code-bg;
 
+    line-height: 1;
+
+    margin: 0 .25em;
+    padding: 0 .35em;
+  }
+}
 
 
 
@@ -269,18 +260,16 @@ p code {
 */
 
 blockquote {
-  position: relative;
-
-  padding-left: 1.5em;
-
-  color: @light-black;
-  border-left: dotted .075em @border-color;
-}
-
-blockquote p {
-  font-size: 1em;
+  font-style: italic;
 
   position: relative;
+
+  margin: 0;
+  margin-left: -1em;
+  padding-left: 1em;
+
+  color: @cl-border;
+  border-left: dotted .075em @cl-border;
 }
 
 
@@ -309,15 +298,14 @@ abbr[title],
 acronym[title],
 dfn[title] {
   cursor: help;
-
-  border-bottom: .075em dotted @border-color;
 }
 
 
 
 hr {
-  height: 1.5em;
+  .vertical-margin(2, 1);
+  .height(1);
 
   border: none;
-  border-top: dotted .075em @border-color;
+  box-shadow: 0 -1px 0 0 @cl-border;
 }

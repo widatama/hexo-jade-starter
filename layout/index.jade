@@ -4,9 +4,9 @@ block site_body
   ul.post-items
     each post in page.posts.toArray()
       li.post-item
-        article.post
+        article.post.post--compact
           h2.post-item__title
             a(href=url_for(post.path))= post.title
-          .post__excerpt= post.excerpt
+          .post__excerpt!= post.excerpt
 
   include _partial/post/list_pagination

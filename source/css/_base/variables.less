@@ -9,24 +9,26 @@
 @light-black: #555555;
 @basic-gray: #777777;
 @light-gray: #DFDFDF;
-@very-light-gray: #FCFCFC;
-@hexo: #1483CD;
+@very-light-gray: #F7F7F7;
+@navy: #0C5A8D;
+@red: #FF0000;
 
 
 
-@body-background: @plain-white;
+@cl-body-bg: @plain-white;
+@cl-body-text: @basic-black;
 
-@body-text: @basic-black;
+@cl-link-active: @light-black;
+@cl-link-active-alt: @navy;
+@cl-link-hover: @navy;
+@cl-link-visited: @basic-black;
 
-@active-link: @light-black;
-@active-link-alt: @hexo;
-@hover-link: @hexo;
-@visited-link: @basic-black;
+@cl-border: @light-black;
 
-@border-color: @light-black;
+@cl-code-bg: @very-light-gray;
+@cl-code-border: @light-gray;
 
-@code-background: @very-light-gray;
-@code-border: @light-gray;
+@cl-highlight: @red;
 
 
 
@@ -37,21 +39,43 @@
 */
 
 @typeface-path: "typefaces/";
-@font-family-base: "Clear Sans", "Helvetica Neue", Helvetica, sans-serif;
-@font-family-code: monospace;
+
+@font-stack-clear-sans: "Clear Sans", "Helvetica Neue", Helvetica, sans-serif;
+@font-stack-source-code-pro: "Source Code Pro", "Dejavu Sans Mono", Monaco, Consolas, monospace;
+
 @font-size-base: 20px;
 @font-size-medium: 16px;
 @font-size-small: 12px;
+
+@font-size-em: 1em;
+
 @line-height-base: 1.5;
+
+@ff-base: @font-stack-clear-sans;
+@ff-heading: @font-stack-clear-sans;
+@ff-code: @font-stack-source-code-pro;
 
 
 
 /*
 
-  Breakpoints
+  Sizes and breakpoints
 */
+
+@width-base: 50%;
+@width-max-base: 36em;
+
+@width-medium: 80%;
+
+@width-small: 90%;
 
 @medium-min: 480px;
 @medium-max: 1279px;
 
 @small-max: 479px;
+
+@bp-small-max: 479px;
+
+@bp-medium-min: 480px;
+@bp-medium-max: 1279px;
+
