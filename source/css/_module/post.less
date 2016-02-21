@@ -19,7 +19,7 @@
 
 .post__title {
   .font-measure(2, 1);
-  .vertical-margin(1);
+  .vertical-margin(1, 0);
 }
 
 .post {
@@ -29,6 +29,10 @@
 .post:hover {
   .post__body a {
     color: @cl-link-active-alt;
+
+    &:hover {
+      box-shadow: inset 0 -1px 0 0 @cl-link-active-alt;
+    }
   }
 }
 
@@ -37,8 +41,8 @@
 }
 
 .post__meta {
-  .font-measure(.75, 2);
-  .vertical-margin(.667);
+  .font-measure(.75, 1);
+  .vertical-margin(0, 1.25);
 
   display: inline-block;
 }

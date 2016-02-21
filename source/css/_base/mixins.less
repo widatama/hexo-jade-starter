@@ -6,25 +6,73 @@
 .vertical-margin(@multiplier) {
   margin-top: (@multiplier * @font-size-em * @line-height-base);
   margin-bottom: (@multiplier * @font-size-em * @line-height-base);
+
+  @media only screen and (min-width: @bp-medium-min) and (max-width: @bp-medium-max) {
+    margin-top: (@multiplier * @font-size-em * @line-height-medium);
+    margin-bottom: (@multiplier * @font-size-em * @line-height-medium);
+  }
+
+  @media only screen and (max-width: @bp-small-max) {
+    margin-top: (@multiplier * @font-size-em * @line-height-small);
+    margin-bottom: (@multiplier * @font-size-em * @line-height-small);
+  }
 }
 
 .vertical-margin(@multiplier-top; @multiplier-bottom) {
   margin-top: (@multiplier-top * @font-size-em * @line-height-base);
   margin-bottom: (@multiplier-bottom * @font-size-em * @line-height-base);
+
+  @media only screen and (min-width: @bp-medium-min) and (max-width: @bp-medium-max) {
+    margin-top: (@multiplier-top * @font-size-em * @line-height-medium);
+    margin-bottom: (@multiplier-bottom * @font-size-em * @line-height-medium);
+  }
+
+  @media only screen and (max-width: @bp-small-max) {
+    margin-top: (@multiplier-top * @font-size-em * @line-height-small);
+    margin-bottom: (@multiplier-bottom * @font-size-em * @line-height-small);
+  }
 }
 
 .vertical-padding(@multiplier) {
   padding-top: (@multiplier * @font-size-em * @line-height-base);
   padding-bottom: (@multiplier * @font-size-em * @line-height-base);
+
+  @media only screen and (min-width: @bp-medium-min) and (max-width: @bp-medium-max) {
+    padding-top: (@multiplier * @font-size-em * @line-height-medium);
+    padding-bottom: (@multiplier * @font-size-em * @line-height-medium);
+  }
+
+  @media only screen and (max-width: @bp-small-max) {
+    padding-top: (@multiplier * @font-size-em * @line-height-small);
+    padding-bottom: (@multiplier * @font-size-em * @line-height-small);
+  }
 }
 
 .vertical-padding(@multiplier-top; @multiplier-bottom) {
   padding-top: (@multiplier-top * @font-size-em * @line-height-base);
   padding-bottom: (@multiplier-bottom * @font-size-em * @line-height-base);
+
+  @media only screen and (min-width: @bp-medium-min) and (max-width: @bp-medium-max) {
+    padding-top: (@multiplier-top * @font-size-em * @line-height-medium);
+    padding-bottom: (@multiplier-bottom * @font-size-em * @line-height-medium);
+  }
+
+  @media only screen and (max-width: @bp-small-max) {
+    padding-top: (@multiplier-top * @font-size-em * @line-height-small);
+    padding-bottom: (@multiplier-bottom * @font-size-em * @line-height-small);
+  }
 }
 
 .height(@multiplier) {
   height: @multiplier * @font-size-em * @line-height-base;
+
+  @media only screen and (min-width: @bp-medium-min) and (max-width: @bp-medium-max) {
+    height: @multiplier * @font-size-em * @line-height-medium;
+  }
+
+  @media only screen and (max-width: @bp-small-max) {
+    height: @multiplier * @font-size-em * @line-height-small;
+  }
 }
 
 .width-responsive {
@@ -53,20 +101,38 @@
 
   @media only screen and (min-width: @bp-medium-min) and (max-width: @bp-medium-max) {
     font-size: @font-size-medium;
+    line-height: @line-height-medium;
   }
 
   @media only screen and (max-width: @bp-small-max) {
     font-size: @font-size-small;
+    line-height: @line-height-small;
   }
 }
 
 .font-measure(@multiplier) {
   font-size: @multiplier * @font-size-em;
   line-height: (@line-height-base * unit(@font-size-em)) / (@multiplier * unit(@font-size-em));
+
+  @media only screen and (min-width: @bp-medium-min) and (max-width: @bp-medium-max) {
+    line-height: (@line-height-medium * unit(@font-size-em)) / (@multiplier * unit(@font-size-em));
+  }
+
+  @media only screen and (max-width: @bp-small-max) {
+    line-height: (@line-height-small * unit(@font-size-em)) / (@multiplier * unit(@font-size-em));
+  }
 }
 
 .font-measure(@multiplier, @scale) {
   font-size: @multiplier * @font-size-em;
   line-height: @scale * (@line-height-base * unit(@font-size-em)) / (@multiplier * unit(@font-size-em));
+
+  @media only screen and (min-width: @bp-medium-min) and (max-width: @bp-medium-max) {
+    line-height: @scale * (@line-height-medium * unit(@font-size-em)) / (@multiplier * unit(@font-size-em));
+  }
+
+  @media only screen and (max-width: @bp-small-max) {
+    line-height: @scale * (@line-height-small * unit(@font-size-em)) / (@multiplier * unit(@font-size-em));
+  }
 }
 

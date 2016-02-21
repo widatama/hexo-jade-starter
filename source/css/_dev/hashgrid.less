@@ -47,10 +47,22 @@
  * visible height = height + borders + margins + padding
  */
 .hashgrid__row {
-  height: 30px;
+  height: 36px;
   margin: 0;
   padding: 0;
 
   border-bottom: 1px dotted darkgray;
+}
+
+@media only screen and (min-width: @bp-medium-min) and (max-width: @bp-medium-max) {
+  .hashgrid__row {
+    height: 24px;
+  }
+}
+
+@media only screen and (max-width: @bp-small-max) {
+  .hashgrid__row {
+    height: 18px;
+  }
 }
 
