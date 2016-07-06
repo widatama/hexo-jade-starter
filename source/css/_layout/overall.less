@@ -9,6 +9,7 @@
   width: 50%;
   max-width: 36em;
   margin-left: 15%;
+  box-shadow: inset 0 4px 0 0 @cl-border;
 }
 
 @media only screen and (max-width: @medium-max) {
@@ -30,19 +31,15 @@
 */
 
 .site-header {
-  .vertical-margin(0, 5);
-  .vertical-padding(2, 0);
+  .vertical-padding(2, 3);
 }
 
 .site__title {
   .vertical-margin(0);
-
-  box-shadow: inset 0 -1px 0 0 @cl-border;
 }
 
 .site__subtitle {
   .font-measure(.75, 1);
-
   .vertical-margin(0);
 }
 
@@ -54,16 +51,14 @@
 
 
 
-
 /*
 
-  Body
+  Content
 */
 
-.page__title {
+.content__title {
   .font-measure(2, 2);
 }
-
 
 
 
